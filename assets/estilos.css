@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    background-image: url('./arepas.png');
+    background-size: cover;
+    background-position: center ;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header-container{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.frases h2{
+    font-size: 0.8em;
+}
+
+/* menu */
+.menu{
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+.menu img{
+    margin-top: 0;
+    width: 10%;
+}
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+ul{
+    list-style: none;
+    display: flex;  
+    
+
+    align-items: center;
+}
+li{
+    margin: 0 40px;
+    align-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+
+/* menu hamburguesa */
+.menuIcono,#check{
+    display: none;
+   
+}
+
+@media screen and (max-width: 550px){
+    .menu,.menuGaleria{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        
+        
+    }
+
+    ul{ 
+        position: fixed;
+        flex-direction: column;
+        /* align-items: end; */   
+        top: 70px;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+        background-color: rgba(255, 165, 0, 0.5);
+        color: white;
+
+    }
+    ul li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        
+    }
+    ul li a{
+        color: black;
+    }
+    
+    .checkbtn{
+        display: block;
+        
+    }
+    .checkbtn img{
+        width: 30px;
+        right: 0;
+    }
+    .menuIcono{
+        display: block;
+        position: fixed;
+        cursor: pointer;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
+    .menu .logo{
+        width: 20vw;
+        height: 10vh;
+
+    }
+
+    .menuGaleria .logo{
+        width: 20vw;
+        height: 10vh;
+
+    }
+   
+    
+}
+
+
+
+/* MAIN */
+.container-main{
+    width: 80%;
+    margin: 80px  auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-main h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px;
+}
+.container-main p{
+    font-size: 2rem;
+    text-align: justify;
+    margin: 20px;
+}
+.video{
+    margin: 40px;
+    text-align: center;
+    
+}
+.video video{
+    width: 40%;
+    
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 5);
+}
+.video figcaption{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+    
+
+
+/* Formulario */
+aside{
+    display: flex;
+    flex-direction: column;
+    background-image: url('./arepasAside.png');
+    background-size: cover;
+    
+}
+.aside-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h3 {
+    margin: 20px 0 40px;
+    font-size: 2rem;
+    
+  }
+  
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  label,
+  input,
+  textarea,
+  select {
+    margin-bottom: 50px;
+  }
+  
+  input,
+  textarea {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-bottom-color:  orange;
+  }
+  
+  .pedidos {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .pedidos:hover {
+    background-color: #ff944d;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  footer {
+    
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* galeria */
+
+  .menuGaleria{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ff944d;
+}
+.menuGaleria img{
+    margin-top: 0;
+    width: 10%;
+}
+  
+  .container-galery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-top: 100px;
+  }
+  .fila{
+    
+    padding: 5px;
+    
+  }
+  .columna{
+    padding: 5px
+  }
+  .columna img{
+    
+    margin:10px;
+    height: 20vh;
+    width: 15vw;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    cursor: pointer;
+
+  }
+
+  .columna img:hover{
+    transition: 0.2s linear;
+    transform: scale(1.1)
+  }
+
+  @media screen and (max-width: 550px){
+    .container-galery .columna img{
+        height: 15vh;
+        width: 17vw;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    }
+  }

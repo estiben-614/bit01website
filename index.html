@@ -1,12 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contenido en desarrollo</title>
+    <link rel="stylesheet" href="./assets/estilos.css">
+    <link rel="icon" href="./assets/arepasLaTataNegro.png">
+    <title>Arepas la Tata</title>
 </head>
 <body>
-    <h1>Contenido en desarrollo</h1>
+    <nav class="menu">
+        <img class="logo" src="./assets/arepasLaTataNegro.png" alt="">
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <img src="./assets/menu.png" class="menuIcono"  alt="">
+        </label>
+        <ul>
+            <li><a href="#header">Inicio</a></li>
+            <li><a href="#main">Nosotros</a></li>
+            <li><a href="#aside">Pedidos</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </nav>
+    <header id="header">
+        
+        <div class="header-container">
+            
+            <div class="frases">
+                <h1>Arepas la Tata</h1>
+                <h2>Una tradición familiar hecha arepa</h2>
+            </div>
+            
+        </div>
+    </header>
+    <main id="main">
+        <div class="container-main">
+            <h1>Arepas la Tata</h1>
+
+        <p>¡Prueba las deliciosas arepas de queso con mucho queso, preparadas con la receta de la abuela!
+         Cada bocado te transportará a la auténtica cocina de nuestra familia, donde se combinan los sabores y aromas que han pasado de generación en generación.
+        ¡No te pierdas esta tradición culinaria y disfruta de unas arepas de queso únicas y deliciosas!</p>
+        
+        
+        <div class="video">
+            <figure>
+                <video controls autoplay loop>
+                    <source src="./assets/videoArepas.mp4" type="video/mp4">
+                </video>
+                <figcaption>"El secreto detrás de nuestras increíbles arepas de queso: la receta de la abuela"</figcaption>
+            </figure>
+        </div>
+        </div>
+        
+    </main>
+
+    <aside id="aside">
+        <div class="aside-container">
+            <h3>¿Quieres que tus sueños de arepa se hagan realidad? ¡Pide aquí!</h3>
+        <form action="">
+            <label for="nombre">Nombre y apellido:</label>
+            <input name="nombre" type="text" placeholder="Nombre" required>
+            <br>
+            <label for="telefono">Teléfono:</label>
+            <input type="number" name="telefono" id="" placeholder="Número de teléfono" required>
+            <br>
+            <label for="direccion">Dirección de entrega: </label>
+            <input name="direccion" type="text" placeholder="Dirección" required>
+            <br>
+            <label for="cantidad">Cantidad:</label>
+            <select name="opciones" id="" required>
+                <option value="1">1</option>
+                <option value="1">2</option>
+                <option value="1">3</option>
+                <option value="1">4</option>
+                <option value="1">5 ó más</option>
+            </select>
+            <br>
+            <label for="adiciones">Adiciones:</label> <br>  
+            <label>
+                Mucho más 🧀<input type="checkbox" name="" id="" class="opciones">
+            </label>
+            <label>
+                Lecherita <input type="checkbox" name="" id="" class="opciones">
+            </label>
+            <label>
+                Carne<input type="checkbox" name="" id="" class="opciones">
+            </label>
+            
+            <br>
+            <label for="notas">Comentarios:</label><br>
+            <textarea name="" id="" cols="20" rows="5"></textarea>
+            <br>
+
+            <button  class="pedidos" type="submit">Enviar pedido</button>
+        </form>
+        </div>
+        
+    </aside>
+    <footer>
+        <p>Todos los derechos reservados &copy; 2023 Estiben Fernández Echeverri</p>
+    </footer>
 </body>
 </html>
