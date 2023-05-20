@@ -11,7 +11,6 @@
 <body>
     <nav class="menu">
         <img class="logo" src="./assets/arepasLaTataNegro.png" alt="">
-        
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <img src="./assets/menu.png" class="menuIcono"  alt="">
@@ -23,6 +22,7 @@
             <li><a href="galeria.html">Galeria</a></li>
         </ul>
     </nav>
+    
     <header id="header">
         
         <div class="header-container">
@@ -60,16 +60,16 @@
             <h3>¿Quieres una arepa de queso que si tiene queso? ¡Pide aquí!</h3>
         <form action="">
             <label for="nombre">Nombre y apellido:</label>
-            <input name="nombre" type="text" placeholder="Nombre" required>
+            <input name="nombre" type="text" placeholder="Nombre" required id="nombre">
             <br>
             <label for="telefono">Teléfono:</label>
-            <input type="number" name="telefono" id="" placeholder="Número de teléfono" required>
+            <input type="number" name="telefono"  placeholder="Número de teléfono" required id="telefono">
             <br>
             <label for="direccion">Dirección de entrega: </label>
-            <input name="direccion" type="text" placeholder="Dirección" required>
+            <input name="direccion" type="text" placeholder="Dirección" required id="direccion">
             <br>
             <label for="cantidad">Cantidad:</label>
-            <select name="opciones" id="" required>
+            <select name="opciones" required id="cantidad">
                 <option value="1">1</option>
                 <option value="1">2</option>
                 <option value="1">3</option>
@@ -79,21 +79,21 @@
             <br>
             <label for="adiciones">Adiciones:</label> <br>  
             <label>
-                Mucho más 🧀<input type="checkbox" name="" id="" class="opciones">
+                Mucho más 🧀<input type="checkbox"  class="adiciones" name="queso" value="queso" id="queso">
             </label>
             <label>
-                Lecherita <input type="checkbox" name="" id="" class="opciones">
+                Lecherita <input type="checkbox"  class="adiciones" name="Lecherita" value="Lecherita" id="lecherita">
             </label>
             <label>
-                Carne<input type="checkbox" name="" id="" class="opciones">
+                Carne<input type="checkbox"  class="adiciones" name="Carne" value="Carne" id="carne">
             </label>
             
             <br>
             <label for="notas">Comentarios:</label><br>
-            <textarea name="" id="" cols="20" rows="5"></textarea>
+            <textarea name=""  cols="20" rows="5" id="comentarios"></textarea>
             <br>
 
-            <button  class="pedidos" type="submit">Enviar pedido</button>
+            <button  class="pedidos" type="submit" id="boton"><a href="gracias.html" target="_blank">Enviar pedido</a> </button>
         </form>
         </div>
         
@@ -101,5 +101,6 @@
     <footer>
         <p>Todos los derechos reservados &copy; 2023 Estiben Fernández Echeverri</p>
     </footer>
+    <script src="./gracias.js"></script>
 </body>
 </html>
