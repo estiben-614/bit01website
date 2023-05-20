@@ -20,7 +20,7 @@ const pedido={
     telefono:null,
     direccion:null,
     cantidad:null,
-    adiciones:null,
+    adiciones:'',
     comentarios:null,
 }
 //recibamos el valor de cada input con su evento
@@ -35,20 +35,14 @@ telefono.addEventListener('input',(evento)=>{
 direccion.addEventListener('input',(evento)=>{
      pedido.direccion=evento.target.value
 })
-cantidad.addEventListener('input',(evento)=>{
-     pedido.cantidad=evento.target.value
+
+//Recibimos el valor del select que tiene la cantidad
+cantidad.addEventListener('change',()=>{
+     pedido.cantidad=cantidad.value
 })
 
 
-adiciones.addEventListener('change',(evento)=>{
 
-    if(queso.checked){
-        console.log(queso)
-    }
-    else if(lecherita.checked){
-        console.log(lecherita)
-    }
-})
 comentarios.addEventListener('input',(evento)=>{
      pedido.comentarios=evento.target.value
      console.log(pedido.comentarios)
@@ -57,6 +51,27 @@ comentarios.addEventListener('input',(evento)=>{
 
 boton.addEventListener('click',(evento)=>{
     evento.preventDefault()
+
+    //Recuperamos el valor de los checkbox. Lo hacemos con un ciclo de 3 iteraciones porque son 3 posibles adiciones 
+    for(let i=0;i<3;i++){
+        if(queso.checked){
+            pedido.adiciones+=queso.value+ ','+' '
+            //Desmarcamos el checkbox
+            queso.checked=false
+        }
+        else if(lecherita.checked){
+            pedido.adiciones+=lecherita.value+ ','+' '
+            //Desmarcamos el checkbox
+            lecherita.checked=false
+        }
+        else if(carne.checked){
+            console.log(carne)
+            pedido.adiciones+=carne.value+ ','+' '
+
+            //Desmarcamos el checkbox
+            carne.checked=false
+        }
+    }
     
     
 
