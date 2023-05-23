@@ -178,6 +178,9 @@ li{
 
 
 /* Formulario */
+#alerta{
+    margin-bottom: 20px;
+}
 aside{
     display: flex;
     flex-direction: column;
@@ -305,4 +308,5 @@ aside{
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     }
   }
+
 

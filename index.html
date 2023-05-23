@@ -57,19 +57,25 @@
 
     <aside id="aside">
         <div class="aside-container">
-            <h3>¿Quieres una arepa de queso que si tiene queso? ¡Pide aquí!</h3>
-        <form action="">
-            <label for="nombre">Nombre y apellido:</label>
-            <input name="nombre" type="text" placeholder="Nombre" required id="nombre">
+            <h3>¿Quieres una arepa de queso que si tiene queso y por solo $5000? <br>¡Pide aquí!</h3>
+
+            <div id="alerta">
+
+            </div>
+            
+        <form action="" id="formulario">
+            <label for="nombre">* Nombre y apellido:</label>
+            <input name="nombre" type="text" placeholder="Nombre"  id="nombre" required>
             <br>
-            <label for="telefono">Teléfono:</label>
-            <input type="number" name="telefono"  placeholder="Número de teléfono" required id="telefono">
+            <label for="telefono">* Teléfono:</label>
+            <input type="number" name="telefono"  placeholder="Número de teléfono"  id="telefono" required>
             <br>
-            <label for="direccion">Dirección de entrega: </label>
-            <input name="direccion" type="text" placeholder="Dirección" required id="direccion">
+            <label for="direccion">* Dirección de entrega: </label>
+            <input name="direccion" type="text" placeholder="Dirección"  id="direccion" required>
             <br>
             <label for="cantidad">Cantidad:</label>
             <select name="opciones" required id="cantidad">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -93,7 +99,7 @@
             <textarea name=""  cols="20" rows="5" id="comentarios"></textarea>
             <br>
 
-            <button  class="pedidos" type="submit" id="boton"><a href="gracias.html" target="_blank">Enviar pedido</a> </button>
+            <button  class="pedidos" type="submit" id="boton">Enviar pedido </button>
         </form>
         </div>
         
@@ -101,6 +107,6 @@
     <footer>
         <p>Todos los derechos reservados &copy; 2023 Estiben Fernández Echeverri</p>
     </footer>
-    <script src="./gracias.js"></script>
+    <script src="./assets/index.js"></script>
 </body>
 </html>
